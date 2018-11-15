@@ -28,13 +28,6 @@ ActiveRecord::Schema.define(version: 2018_11_15_140643) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "migrations", force: :cascade do |t|
-    t.string "add_diasemana_to_horario"
-    t.string "diasemana"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "login"
     t.string "password"
