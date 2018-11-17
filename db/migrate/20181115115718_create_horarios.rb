@@ -5,6 +5,7 @@ class CreateHorarios < ActiveRecord::Migration[5.2]
       t.integer :turno
       t.string :embarque
       t.integer :presenca
+      t.string :diasemana
 
       t.timestamps
     end
