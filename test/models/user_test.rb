@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "User null camps" do
+    user = User.new
+    assert_not user.save, "All null Camps"
+  end
 end

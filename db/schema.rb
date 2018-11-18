@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 2018_11_15_140643) do
     t.integer "turno"
     t.string "embarque"
     t.integer "presenca"
+    t.string "diasemana"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "diasemana"
   end
 
   create_table "logins", force: :cascade do |t|
