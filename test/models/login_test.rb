@@ -5,7 +5,7 @@ class LoginTest < ActiveSupport::TestCase
   #   assert true
   # end
 
-  test "Login null camps" do
+  test "invalid without token" do
     login = Login.new
     assert_not login.save, "All null Camps"
   end

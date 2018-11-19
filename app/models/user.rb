@@ -6,4 +6,5 @@ class User < ApplicationRecord
     validates :sobrenome, presence: true
     validates :endereco, presence: true
     validates :cpf, presence: true
+    validates :tipodeusuario, presence: true
 end
