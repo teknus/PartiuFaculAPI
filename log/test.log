@@ -9219,3 +9219,203 @@ Processing by Api::V1::UsersController#show as HTML
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? AND "users"."tipodeusuario" IS NULL[0m  [["id", 1]]
 Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms)
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.8ms)[0m  [1m[31mDELETE FROM "logins"[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "horarios"[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.7ms)[0m  [1m[32mINSERT INTO "logins" ("token", "created_at", "updated_at", "id") VALUES ('MyString', '2018-11-19 01:34:42.635527', '2018-11-19 01:34:42.635527', 980190962)[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "logins" ("token", "created_at", "updated_at", "id") VALUES ('MyString', '2018-11-19 01:34:42.635527', '2018-11-19 01:34:42.635527', 298486374)[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "horarios" ("data", "turno", "embarque", "presenca", "created_at", "updated_at", "id") VALUES ('2018-11-15', 1, 'MyString', 1, '2018-11-19 01:34:42.643366', '2018-11-19 01:34:42.643366', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "horarios" ("data", "turno", "embarque", "presenca", "created_at", "updated_at", "id") VALUES ('2018-11-15', 1, 'MyString', 1, '2018-11-19 01:34:42.643366', '2018-11-19 01:34:42.643366', 298486374)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "email", "cpf", "endereco", "matricula", "nome", "sobrenome", "tipodeusuario", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2018-11-19 01:34:42.649566', '2018-11-19 01:34:42.649566', 980190962)[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "email", "cpf", "endereco", "matricula", "nome", "sobrenome", "tipodeusuario", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2018-11-19 01:34:42.649566', '2018-11-19 01:34:42.649566', 298486374)[0m
+  [1m[35m (137.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+LoginTest: test_invalid_without_token
+-------------------------------------
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+HorarioTest: test_invalid_without_presenca
+------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHorario Create (0.6ms)[0m  [1m[32mINSERT INTO "horarios" ("data", "turno", "embarque", "presenca", "diasemana", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["data", "2008-05-12"], ["turno", 1], ["embarque", "Flores"], ["presenca", 0], ["diasemana", "seg"], ["created_at", "2018-11-19 01:34:42.938697"], ["updated_at", "2018-11-19 01:34:42.938697"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------
+HorarioTest: test_valid_horario
+-------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHorario Create (0.3ms)[0m  [1m[32mINSERT INTO "horarios" ("data", "turno", "embarque", "presenca", "diasemana", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["data", "2008-05-12"], ["turno", 1], ["embarque", "Flores"], ["presenca", 0], ["diasemana", "seg"], ["created_at", "2018-11-19 01:34:42.946334"], ["updated_at", "2018-11-19 01:34:42.946334"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+HorarioTest: test_invalid_without_turno
+---------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHorario Create (0.3ms)[0m  [1m[32mINSERT INTO "horarios" ("data", "turno", "embarque", "presenca", "diasemana", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["data", "2008-05-12"], ["turno", 1], ["embarque", "Flores"], ["presenca", 0], ["diasemana", "seg"], ["created_at", "2018-11-19 01:34:42.949701"], ["updated_at", "2018-11-19 01:34:42.949701"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+HorarioTest: test_invalid_with_negative_turno
+---------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHorario Create (0.3ms)[0m  [1m[32mINSERT INTO "horarios" ("data", "turno", "embarque", "presenca", "diasemana", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["data", "2008-05-12"], ["turno", 1], ["embarque", "Flores"], ["presenca", 0], ["diasemana", "seg"], ["created_at", "2018-11-19 01:34:42.954380"], ["updated_at", "2018-11-19 01:34:42.954380"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+HorarioTest: test_invalid_without_data
+--------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHorario Create (0.2ms)[0m  [1m[32mINSERT INTO "horarios" ("data", "turno", "embarque", "presenca", "diasemana", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["data", "2008-05-12"], ["turno", 1], ["embarque", "Flores"], ["presenca", 0], ["diasemana", "seg"], ["created_at", "2018-11-19 01:34:42.957599"], ["updated_at", "2018-11-19 01:34:42.957599"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+HorarioTest: test_invalid_without_embarque
+------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mHorario Create (0.3ms)[0m  [1m[32mINSERT INTO "horarios" ("data", "turno", "embarque", "presenca", "diasemana", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["data", "2008-05-12"], ["turno", 1], ["embarque", "Flores"], ["presenca", 0], ["diasemana", "seg"], ["created_at", "2018-11-19 01:34:42.960996"], ["updated_at", "2018-11-19 01:34:42.960996"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+HorariosControllerTest: test_get_all_horarios
+---------------------------------------------
+Started GET "/api/v1/horarios" for 127.0.0.1 at 2018-11-18 22:34:43 -0300
+Processing by Api::V1::HorariosController#index as HTML
+  [1m[36mHorario Load (0.3ms)[0m  [1m[34mSELECT "horarios".* FROM "horarios"[0m
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+UsersControllerTest: test_get_all_users
+---------------------------------------
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-11-18 22:34:43 -0300
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+UsersControllerTest: test_should_show_user
+------------------------------------------
+Started GET "/api/v1/users/1" for 127.0.0.1 at 2018-11-18 22:34:43 -0300
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? AND "users"."tipodeusuario" IS NULL[0m  [["id", 1]]
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+UserTest: test_invalid_without_cpf
+----------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "tk"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "email", "cpf", "endereco", "matricula", "nome", "sobrenome", "tipodeusuario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["login", "tk"], ["password", "812938"], ["email", "ma@hl.com"], ["cpf", "00228916097"], ["endereco", "Rua da Maritaca nº 373, Alto dos Gigantes, Russas, CE"], ["matricula", "9090"], ["nome", "Afonso"], ["sobrenome", "Mateus"], ["tipodeusuario", "aluno"], ["created_at", "2018-11-19 01:34:43.712523"], ["updated_at", "2018-11-19 01:34:43.712523"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? AND "users"."id" != ? LIMIT ?[0m  [["login", "tk"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+UserTest: test_invalid_without_password
+---------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "tk"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "email", "cpf", "endereco", "matricula", "nome", "sobrenome", "tipodeusuario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["login", "tk"], ["password", "812938"], ["email", "ma@hl.com"], ["cpf", "00228916097"], ["endereco", "Rua da Maritaca nº 373, Alto dos Gigantes, Russas, CE"], ["matricula", "9090"], ["nome", "Afonso"], ["sobrenome", "Mateus"], ["tipodeusuario", "aluno"], ["created_at", "2018-11-19 01:34:43.722297"], ["updated_at", "2018-11-19 01:34:43.722297"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? AND "users"."id" != ? LIMIT ?[0m  [["login", "tk"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+UserTest: test_invalid_without_tipodeusuario
+--------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "tk"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "email", "cpf", "endereco", "matricula", "nome", "sobrenome", "tipodeusuario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["login", "tk"], ["password", "812938"], ["email", "ma@hl.com"], ["cpf", "00228916097"], ["endereco", "Rua da Maritaca nº 373, Alto dos Gigantes, Russas, CE"], ["matricula", "9090"], ["nome", "Afonso"], ["sobrenome", "Mateus"], ["tipodeusuario", "aluno"], ["created_at", "2018-11-19 01:34:43.731780"], ["updated_at", "2018-11-19 01:34:43.731780"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? AND "users"."id" != ? LIMIT ?[0m  [["login", "tk"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------
+UserTest: test_valid_user
+-------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "tk"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "email", "cpf", "endereco", "matricula", "nome", "sobrenome", "tipodeusuario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["login", "tk"], ["password", "812938"], ["email", "ma@hl.com"], ["cpf", "00228916097"], ["endereco", "Rua da Maritaca nº 373, Alto dos Gigantes, Russas, CE"], ["matricula", "9090"], ["nome", "Afonso"], ["sobrenome", "Mateus"], ["tipodeusuario", "aluno"], ["created_at", "2018-11-19 01:34:43.740583"], ["updated_at", "2018-11-19 01:34:43.740583"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? AND "users"."id" != ? LIMIT ?[0m  [["login", "tk"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+UserTest: test_invalid_with_short_passowrd
+------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "tk"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "email", "cpf", "endereco", "matricula", "nome", "sobrenome", "tipodeusuario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["login", "tk"], ["password", "812938"], ["email", "ma@hl.com"], ["cpf", "00228916097"], ["endereco", "Rua da Maritaca nº 373, Alto dos Gigantes, Russas, CE"], ["matricula", "9090"], ["nome", "Afonso"], ["sobrenome", "Mateus"], ["tipodeusuario", "aluno"], ["created_at", "2018-11-19 01:34:43.748796"], ["updated_at", "2018-11-19 01:34:43.748796"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? AND "users"."id" != ? LIMIT ?[0m  [["login", "tk"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------
+UserTest: test_User_null_camps
+------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "tk"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "email", "cpf", "endereco", "matricula", "nome", "sobrenome", "tipodeusuario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["login", "tk"], ["password", "812938"], ["email", "ma@hl.com"], ["cpf", "00228916097"], ["endereco", "Rua da Maritaca nº 373, Alto dos Gigantes, Russas, CE"], ["matricula", "9090"], ["nome", "Afonso"], ["sobrenome", "Mateus"], ["tipodeusuario", "aluno"], ["created_at", "2018-11-19 01:34:43.756434"], ["updated_at", "2018-11-19 01:34:43.756434"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+UserTest: test_invalid_without_email
+------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "tk"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "email", "cpf", "endereco", "matricula", "nome", "sobrenome", "tipodeusuario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["login", "tk"], ["password", "812938"], ["email", "ma@hl.com"], ["cpf", "00228916097"], ["endereco", "Rua da Maritaca nº 373, Alto dos Gigantes, Russas, CE"], ["matricula", "9090"], ["nome", "Afonso"], ["sobrenome", "Mateus"], ["tipodeusuario", "aluno"], ["created_at", "2018-11-19 01:34:43.767312"], ["updated_at", "2018-11-19 01:34:43.767312"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? AND "users"."id" != ? LIMIT ?[0m  [["login", "tk"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------
+UserTest: test_invalid_without_login
+------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "tk"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "email", "cpf", "endereco", "matricula", "nome", "sobrenome", "tipodeusuario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["login", "tk"], ["password", "812938"], ["email", "ma@hl.com"], ["cpf", "00228916097"], ["endereco", "Rua da Maritaca nº 373, Alto dos Gigantes, Russas, CE"], ["matricula", "9090"], ["nome", "Afonso"], ["sobrenome", "Mateus"], ["tipodeusuario", "aluno"], ["created_at", "2018-11-19 01:34:43.775171"], ["updated_at", "2018-11-19 01:34:43.775171"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" IS NULL AND "users"."id" != ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------
+UserTest: test_invalid_without_nome
+-----------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "tk"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "email", "cpf", "endereco", "matricula", "nome", "sobrenome", "tipodeusuario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["login", "tk"], ["password", "812938"], ["email", "ma@hl.com"], ["cpf", "00228916097"], ["endereco", "Rua da Maritaca nº 373, Alto dos Gigantes, Russas, CE"], ["matricula", "9090"], ["nome", "Afonso"], ["sobrenome", "Mateus"], ["tipodeusuario", "aluno"], ["created_at", "2018-11-19 01:34:43.783497"], ["updated_at", "2018-11-19 01:34:43.783497"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? AND "users"."id" != ? LIMIT ?[0m  [["login", "tk"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UserTest: test_invalid_without_sobrenome
+----------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "tk"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "email", "cpf", "endereco", "matricula", "nome", "sobrenome", "tipodeusuario", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["login", "tk"], ["password", "812938"], ["email", "ma@hl.com"], ["cpf", "00228916097"], ["endereco", "Rua da Maritaca nº 373, Alto dos Gigantes, Russas, CE"], ["matricula", "9090"], ["nome", "Afonso"], ["sobrenome", "Mateus"], ["tipodeusuario", "aluno"], ["created_at", "2018-11-19 01:34:43.791030"], ["updated_at", "2018-11-19 01:34:43.791030"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."login" = ? AND "users"."id" != ? LIMIT ?[0m  [["login", "tk"], ["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
