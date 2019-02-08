@@ -17,7 +17,7 @@ Screenshots das telas do aplicativo que a api da suporte a utilização.
     <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5152129519040178157.jpg" width="150" title="hover text">
   </br>
 </p>
-App Design by ![Thomas Dillan](https://github.com/ThomasDillanBM)
+App Design by [Thomas Dillan]:(https://github.com/ThomasDillanBM)
 [I'm an inline-style link](https://www.google.com)
 
 
