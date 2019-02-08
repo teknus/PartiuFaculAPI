@@ -6,7 +6,7 @@ Esta API é utiliza um sistema de mensagens JSON para realizar sua comunicação
 
 Screenshots das telas do aplicativo que a api da suporte a utilização.
 
-#### App Design by
+#### Design by
 
 ##### [Thomas Dillan](https://github.com/ThomasDillanBM)
 
