@@ -9,14 +9,14 @@ Screenshots das telas do aplicativo que a api da suporte a utilização.
 
 <p align="center">
   
-  <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5154807276530411543.jpg" width="100" title="hover text">
-   <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5152129519040178158.jpg" width="100" title="hover text">
-  <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5154807276530411545.jpg" width="100" title="hover text">
-    <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5154807276530411546.jpg" width="100" title="hover text">
-    <img src="  https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5152129519040178157.jpg" width="100" title="hover text">
+  <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5154807276530411543.jpg" width="150" title="hover text">
+   <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5152129519040178158.jpg" width="150" title="hover text">
+  <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5154807276530411545.jpg" width="150" title="hover text">
+    <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5154807276530411546.jpg" width="150" title="hover text">
+    <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5152129519040178157.jpg" width="150" title="hover text">
 
 </p>
 
 
 
-Foram utilizadas as seguintes tecnologias: o Docker como plataforma para execução,Ruby on Rails para o desenvovimento da API e para testes unitarios e o postgresql como solução de banco de dados.
+Foram utilizadas as seguintes tecnologias: o Docker como container engine,Ruby on Rails para o desenvovimento da API e para testes unitarios e o postgresql como solução de banco de dados.
