@@ -12,6 +12,7 @@ Screenshots das telas do aplicativo que a api da suporte a utilização.
   <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5154807276530411543.jpg" width="150" title="hover text">
    <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5152129519040178158.jpg" width="150" title="hover text">
   <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5154807276530411545.jpg" width="150" title="hover text">
+  </br>
     <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5154807276530411546.jpg" width="150" title="hover text">
     <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5152129519040178157.jpg" width="150" title="hover text">
 
