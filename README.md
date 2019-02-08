@@ -21,4 +21,5 @@ App Design by
 
 [Thomas Dillan](https://github.com/ThomasDillanBM)
 
+
 Foram utilizadas as seguintes tecnologias: o Docker como container engine,Ruby on Rails para o desenvovimento da API e para testes unitarios e o postgresql como solução de banco de dados.
