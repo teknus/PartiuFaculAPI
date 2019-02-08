@@ -6,6 +6,9 @@ Esta API é utiliza um sistema de mensagens JSON para realizar sua comunicação
 
 Screenshots das telas do aplicativo que a api da suporte a utilização.
 
+#### App Design by
+
+##### [Thomas Dillan](https://github.com/ThomasDillanBM)
 
 <p align="center">
   
@@ -17,10 +20,6 @@ Screenshots das telas do aplicativo que a api da suporte a utilização.
     <img src="https://github.com/irahel/PartiuFacul/blob/master/Telas/photo5152129519040178157.jpg" width="150" title="hover text">
   </br>
 </p>
-
-#### App Design by
-
-##### [Thomas Dillan](https://github.com/ThomasDillanBM)
 
 
 Foram utilizadas as seguintes tecnologias: o Docker como container engine,Ruby on Rails para o desenvovimento da API e para testes unitarios e o postgresql como solução de banco de dados.
