@@ -18,6 +18,7 @@ Screenshots das telas do aplicativo que a api da suporte a utilização.
   </br>
 </p>
 App Design by
+
 [Thomas Dillan](https://github.com/ThomasDillanBM)
 
 Foram utilizadas as seguintes tecnologias: o Docker como container engine,Ruby on Rails para o desenvovimento da API e para testes unitarios e o postgresql como solução de banco de dados.
