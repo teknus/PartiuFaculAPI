@@ -18,7 +18,8 @@ Screenshots das telas do aplicativo que a api da suporte a utilização.
   </br>
 </p>
 App Design by [Thomas Dillan]:(https://github.com/ThomasDillanBM)
-[I'm an inline-style link](https://www.google.com)
+
+![I'm an inline-style link](https://www.google.com)
 
 
 
